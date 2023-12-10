@@ -1,0 +1,44 @@
+<%layout("./styling/boilarplate.ejs")%>
+<style>
+    .card-body{
+        padding: 0px;
+        display: flex;
+        flex-wrap:wrap;
+        width: 80%;
+        height:fit-content;
+       position: relative;
+       top: 70px;
+       left: 20%;
+       /* z-index: 2; */
+        
+
+    }
+    .card{
+        
+        justify-content: space-evenly;
+        border: 15px white solid;
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        height: 520px;
+        background-color: white;
+    }.card-img{
+        
+        left:-40px;
+        top:-10px;
+        width: 90%;
+        height: 320px;
+    }
+</style>
+<%-include("./partials/menubar.ejs")%>
+<div class="card-body">
+<%for (let product of products){%>
+    <div class="card card-p">
+        
+        <a href="/<%=product._id%>"> <img class="card-img" src="<%=product.image%>"></a>
+        <h5 class="card-h6"><%=product.title%></h5>
+        <a href="/<%=product._id%>">See more</a>
+        </div>
+<%}%>
+</div>
+    

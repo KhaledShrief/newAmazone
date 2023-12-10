@@ -1,0 +1,306 @@
+<%layout("./styling/boilarplate.ejs")%>
+<style>
+  
+    body{
+        padding: 0px;
+        margin: 0%;
+        
+        background-color: rgb(231, 229, 229);
+    }.card-body{
+        padding: 0px;
+        display: flex;
+        flex-wrap:wrap;
+        width: 100%;
+        height:fit-content;
+       position: relative;
+       top: -300px;
+       z-index: 2;
+        
+
+    }
+    .card{
+        
+        justify-content: space-evenly;
+        border: 15px white solid;
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        height: 420px;
+        background-color: white;
+    }.card-img{
+        
+        left:-40px;
+        top:-10px;
+        width: 90%;
+        height: 320px;
+    }#carousel-body{
+        
+        display:flex;
+    }.carousel-body{
+        position: relative;
+        border: 10px rgb(231, 229, 229) solid;
+        top:-290px;
+    }.carousel-card{
+        justify-content: space-evenly;
+        border: 15px white solid;
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        height: 320px;
+        background-color: white;
+    }.carousel-card-img{
+        left:-40px;
+        top:-10px;
+        width: 90%;
+        height: 200px;
+    }.carousel-secbody{
+        position: relative;
+        border: 10px rgb(231, 229, 229) solid;
+        top:-280px;
+    }.card-secbody{
+        padding: 0px;
+        display: flex;
+        flex-wrap:wrap;
+        width: 100%;
+        height:fit-content;
+       position: relative;
+       top: -270px;
+       z-index: 2;
+        
+    }.card-p{
+        position: relative;
+        top: 8px;
+        cursor: pointer;
+    }.carousel-thirdbody{
+        
+        z-index: 4;
+    }
+</style>
+<div data-role="carousel"  data-height="750px"
+ class="carousel"    data-bullets="false">
+    <div class="slide " data-cover="https://wallpapercave.com/wp/wp3631296.jpg"></div>
+    <div class="slide" data-cover="https://i.pinimg.com/originals/3a/1d/23/3a1d238faf14384727305226aef1ebc1.jpg"></div>
+    <div class="slide" data-cover="<%=products[5].image%>"></div>
+</div>
+<div class="card-body">
+    
+        <div class="card card-p">
+            <h5 class="card-h6">Gaming accessories</h5>
+            <a href="/deals"> <img class="card-img" src="<%=products[6].image%>"></a>
+            <a href="/deals">See more</a>
+            </div>
+
+            <div class="card">
+                <h5 class="card-h6">Toys under $25</h5>
+                <a href="/toys"><img class="card-img" src="<%=products[2].image%>"></a>
+                <a href="/toys">Shop now</a>
+                </div>
+                <div class="card">
+                    <h5 class="card-h6">Deals in PCs</h5>
+                    <a href="/deals"><img class="card-img" src="<%=products[1].image%>"></a>
+                    <a href="/deals">Shop now</a>
+                    </div>
+                    <div class="card">
+                        <h5 class="card-h6">Refresh your space</h5>
+                        <a href="/toys"> <img class="card-img" src="<%=products[7].image%>"></a>
+                        <a href="/toys">See more</a>
+                        </div>
+                        <div class="card">
+                            <h5 class="card-h6">Top Deal</h5>
+                            <a href="/makeup"><img class="card-img" src="<%=products[80].image%>"></a>
+                            <a href="/makeup">See all deals</a>
+                            </div>
+                            <div class="card">
+                                <h5 class="card-h6">Free international returns</h5>
+                               <a href="/makeup"><img class="card-img" src="<%=products[70].image%>"></a>
+                                <a href="/makeup">learn more</a>
+                                </div>
+                                <div class="card">
+                                    <h5 class="card-h6">Shop deals in Fashion</h5>
+                                   <a href="/makeup"><img class="card-img" src="<%=products[75].image%>"></a> 
+                                    <a href="/makeup">See all deals</a>
+                                    </div>
+                                    <div class="card">
+                                        <h5 class="card-h6">Fashion trends you like</h5>
+                                        <a href="/fashon"><img class="card-img" src="<%=products[59].image%>"></a>
+                                        <a href="/fashon">Shop now</a>
+                                        </div>
+                 
+</div>
+<div data-role="carousel"  data-height="300px"
+ class="carousel-body"   data-bullets="false">
+    <div class="slide " id="carousel-body"  data-cover="">
+        <div class="carousel-card">
+            
+            <a href="/<%=products[30]._id%>"> <img class="carousel-card-img" src="<%=products[30].image%>"></a>
+            
+            </div>  
+            <div class="carousel-card">
+                
+                <a href="/<%=products[10]._id%>">  <img class="carousel-card-img" src="<%=products[10].image%>"></a>
+                
+                </div>
+                <div class="carousel-card">
+                
+                    <a href="/<%=products[20]._id%>"> <img class="carousel-card-img" src="<%=products[20].image%>"></a>
+                    
+                    </div>
+                    <div class="carousel-card">
+                
+                        <a href="/<%=products[75]._id%>"><img class="carousel-card-img" src="<%=products[75].image%>"></a>
+                        
+                        </div>
+                        <div class="carousel-card">
+                
+                            <a href="/<%=products[50]._id%>">  <img class="carousel-card-img" src="<%=products[50].image%>"></a>
+                            
+                            </div>
+    </div>
+    <div class="slide" id="carousel-body" data-cover="">
+        
+    </div>
+    <div class="slide" id="carousel-body" data-cover=""></div>
+</div>
+<div data-role="carousel"  data-height="300px"
+ class="carousel-secbody"   data-bullets="false">
+    <div class="slide " id="carousel-body"  data-cover="">
+        <div class="carousel-card">
+            
+            <a href="/<%=products[8]._id%>">  <img class="carousel-card-img" src="<%=products[8].image%>"></a>
+            
+            </div>  
+            <div class="carousel-card">
+                
+                <a href="/<%=products[22]._id%>"> <img class="carousel-card-img" src="<%=products[22].image%>"></a>
+                
+                </div>
+                <div class="carousel-card">
+                
+                    <a href="/<%=products[2]._id%>">   <img class="carousel-card-img" src="<%=products[2].image%>"></a>
+                    
+                    </div>
+                    <div class="carousel-card">
+                
+                        <a href="/<%=products[23]._id%>">  <img class="carousel-card-img" src="<%=products[23].image%>"></a>
+                        
+                        </div>
+                        <div class="carousel-card">
+                
+                            <a href="/<%=products[27]._id%>">  <img class="carousel-card-img" src="<%=products[27].image%>"></a>
+                            
+                            </div>
+    </div>
+    <div class="slide" id="carousel-body" data-cover="">
+        
+    </div>
+    <div class="slide" id="carousel-body" data-cover=""></div>
+</div>
+<div class="card-secbody">
+    
+    <div class="card card-p">
+        <h5 class="card-h6">Host gifts under $50</h5>
+        <a href="/makeup"> <img class="card-img" src="<%=products[10].image%>"></a>
+        <a href="/makeup">
+            Shop holiday finds</a>
+        </div>
+
+        <div class="card">
+            <h5 class="card-h6">Personal Care under $25</h5>
+            <a href="/makeup">  <img class="card-img" src="<%=products[20].image%>"></a>
+            <a href="/makeup">See more</a>
+            </div>
+            <div class="card">
+                <h5 class="card-h6">More smiles, for less</h5>
+                <a href="/makeup"> <img class="card-img" src="<%=products[15].image%>"></a>
+                <a href="/makeup">
+                    Shop holiday gifts under $15</a>
+                </div>
+                <div class="card">
+                    <h5 class="card-h6">Creating business solutions</h5>
+                    <a href="/deals"> <img class="card-img" src="<%=products[16].image%>"></a>
+                    <a href="/deals">
+                        See more software products
+                        </a>
+                    </div>
+                   
+             
+</div>
+<div data-role="carousel"  data-height="300px"
+ class="carousel-secbody"   data-bullets="false">
+    <div class="slide " id="carousel-body"  data-cover="">
+        <%for(let i=0; i <= 4; i++){%>
+        <div class="carousel-card">
+            
+            <a href="/<%=products[i]._id%>">   <img class="carousel-card-img" src="<%=products[i].image%>"></a>
+            
+            </div>  
+             <%}%>
+            
+    </div>
+    <div class="slide" id="carousel-body" data-cover="">
+        
+    </div>
+    <div class="slide" id="carousel-body" data-cover=""></div>
+</div>
+<div class="card-secbody">
+    
+    <div class="card card-p">
+        <h5 class="card-h6">Gaming accessories</h5>
+        <a href="/deals">  <img class="card-img" src="<%=products[21].image%>"></a>
+        <a href="/deals">See more</a>
+        </div>
+
+        <div class="card">
+            <h5 class="card-h6">Toys under $25</h5>
+            <a href="/toys">  <img class="card-img" src="<%=products[27].image%>"></a>
+            <a href="/toys">Shop now</a>
+            </div>
+            <div class="card">
+                <h5 class="card-h6">Deals in PCs</h5>
+                <a href="/deals"> <img class="card-img" src="<%=products[1].image%>"></a>
+                <a href="/deals">Shop now</a>
+                </div>
+                <div class="card">
+                    <h5 class="card-h6">Refresh your space</h5>
+                    <a href="/deals">   <img class="card-img" src="<%=products[36].image%>"> </a>
+                    <a href="/deals">See more</a>
+                    </div>
+                   
+             
+</div>
+
+<div data-role="carousel"  data-height="270px"
+ class="carousel-thirdbody"   data-bullets="false">
+    <div class="slide " id="carousel-body"  data-cover="">
+        <div class="carousel-card">
+            
+            <a href="/<%=products[37]._id%>">   <img class="carousel-card-img" src="<%=products[37].image%>"></a>
+            
+            </div>  
+            <div class="carousel-card">
+                
+                <a href="/<%=products[38]._id%>">  <img class="carousel-card-img" src="<%=products[38].image%>"></a>
+                
+                </div>
+                <div class="carousel-card">
+                
+                    <a href="/<%=products[39]._id%>">    <img class="carousel-card-img" src="<%=products[39].image%>"></a>
+                    
+                    </div>
+                    <div class="carousel-card">
+                
+                     <a href="/<%=products[40]._id%>">    <img class="carousel-card-img" src="<%=products[40].image%>"></a>
+                        
+                        </div>
+                        <div class="carousel-card">
+                
+                            <a href="/<%=products[46]._id%>">  <img class="carousel-card-img" src="<%=products[46].image%>"></a>
+                            
+                            </div>
+    </div>
+    <div class="slide" id="carousel-body" data-cover="">
+        
+    </div>
+    <div class="slide" id="carousel-body" data-cover=""></div>
+</div>
+    

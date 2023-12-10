@@ -1,0 +1,260 @@
+<style>
+
+    .width{
+        width: 700px;
+        
+        height: 40px;
+    }
+    .klaus{
+        position: relative;
+        height: 60px;
+        background-color: #131921;
+        color: white;
+        min-width: 90%;
+        top: -20px;
+        display: flex;
+    }
+    .nav{
+        
+        width: 100%;
+        position:relative;
+        margin-top:-75px;
+        display: flex;
+        height: 40px;
+        background-color: #232f3e;
+            z-index: 4;
+            top: 55px;
+    }.k{
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: small;
+        color: white;
+        text-decoration: none;
+       /* background-color: red; */
+    }ul{
+        display: flex;
+        text-decoration: none;
+        height: 20px;
+        width: 40%;
+        justify-content: space-evenly;
+       /* background-color: green; */
+
+    }
+    li{
+        margin-top: -16px;
+        display: flex;
+        text-decoration: none;
+        justify-content: space-around;
+        height: 40px;
+        width: 100px;
+        padding: 1px;
+        /* background-color: red; */
+    }
+    
+    li:hover{
+        border-radius: 3px;
+        border: 1px white solid;
+    
+    }
+     .mk{
+        display:block;
+  width:21%;
+  height:600px;  
+justify-content:space-around;
+margin-left:-20;
+ padding-top:30px;
+ font-size:20px;
+ min-width:50px;
+ text-align:center;
+ position:fixed;
+ top:12;
+overflow:auto;
+  z-index:2 ;
+    }.km{
+        margin-top: -30px;
+        margin-bottom: 20px;
+        
+    }
+    .head{
+                
+        width: 100%;
+        height: 40px;
+        background-color: #232f3e;
+        color: white;
+        font-size: large;
+        z-index: 1;
+    }
+    .kiko{
+        background-color: #232f3e;
+       color: white;
+       font-weight: 500;
+       font-size: large;
+    }
+    .all{
+       position: relative;
+       left: 115px;
+      background-color: #e6e6e6;
+      width: 60px;
+      height: 40px;
+      color: black;
+      border: 2px #e6e6e6 solid;
+      padding: 8px;
+      font-size: small;
+      border-radius: 5px 0px 0px 5px;
+    }a{
+        
+        color: black;
+        text-decoration: none;
+    }.nav-form{
+       width:800px;
+        margin-top: 10px;
+        padding: 0%;
+        display: flex;
+        margin-left: -250px;
+    }.d{
+        width:110px;
+        height: 50px;
+        margin-left:20px ;
+    }.d:hover{
+            border-radius: 3px;
+        border: 1px white solid;
+    }
+    .search{
+        /* margin-top: 0px; */
+        height: 40px;
+        width:60px;
+        font-weight: 800;
+        font-size: larger;
+        color:rgb(71, 60, 60);
+        background-color: #febd69;
+        border: 2px #febd69 solid;
+        border-radius: 0px 5px 5px 0px  ;
+    }.flag{
+        width: 30px;
+        height: 30px;
+        margin-top: -5px;
+    }select{
+        background-color: #131921;
+        color: #e6e6e6;
+        border: 1px #131921 solid;
+    }
+    .signin:hover{
+        border-radius: 3px;
+        border: 1px white solid;
+    }.top{
+        position: relative;
+        top:-10px;
+        font-weight: 100;
+        font-size: smaller;
+    }.bottom{
+        position: relative;
+        left:-50px;
+        bottom: -5px;
+    }.adam{
+        width: 50px;
+        height: 40px;
+    }.top1{
+        position: relative;
+        top:-10px;
+        left: 10px;
+        font-weight: 100;
+        font-size: smaller;
+    }.bottom1{
+        position: relative;
+        left:-50px;
+        bottom: -5px;
+    }.top2{
+        position: relative;
+        top:-10px;
+        font-weight: 100;
+        font-size: smaller;
+    }.bottom2{
+        position: relative;
+        left:-40px;
+        bottom: -5px;
+    }
+    .bottom3{
+        position: relative;
+        left:-5px;
+        bottom: 5px;
+    }.top3{
+        position: relative;
+        top:-10px;
+        left: 5px;
+        font-weight: 100;
+        font-size: smaller;
+    }hr{
+        background-color:#d5dbdb;
+        height: 1px;
+    }.img1{
+        width: 150px;
+        height: 50px;
+        /* background-color: red; */
+        img{
+        margin-left: 20px;
+        margin-top:8px;
+        height: 36px;
+        width:96px;
+    }
+        cursor: pointer;
+    }.img1:hover{
+        border-radius: 3px;
+        border: 1px white solid;
+        cursor: pointer;
+    }
+        
+</style>
+
+<div class="nav">
+    <ul>
+    <li><aside class="sidebar pos-absolute z-2 mk" data-role="sidebar" data-toggle="#sidebar-toggle-2">
+        <div class="km">
+            <% if(!currentUser){%>
+            <div class="head"><b >Hello, sign in</b></div>
+            <%}else{%>
+                <div class="head"><b >Hello, <%=currentUser.username%></b></div>
+                <%}%> 
+        <ul class="sidebar-menu d-menu">
+            <h5>Digital Content & Devices
+            </h5>
+            
+           
+            <li class="side-li"><a href="/deals">LCD</a></li>
+            <li class="side-li"><a href="/deals">T.V</a></li>
+            <hr>
+            <h5 >Shop By Department
+            </h5>
+            <li class="side-li"><a href="/fashon">Fashon & Beauty</a></li>
+            <li class="side-li"><a href="/makeup">Makeup</a></li>
+            <hr>
+            <h5>Programs & kidds
+            </h5>
+            <li class="side-li"><a href="/">Home</a></li>
+            <li class="side-li"><a href="/toys">Toys</a></li>
+            <li class="side-li"><a href="/fashon">Kidds Clothes</a></li>
+            <hr>
+            <h5>Help & Settings
+            </h5>
+            <% if(!currentUser){%>
+            <li class="side-li"><a href="/login">Sign In</a></li>
+            <li class="side-li"><a href="/register">Register</a></li>
+            <%}else{%>
+            <li class="side-li"><a href="/logout">Signout</a></li>
+            <%}%> 
+            <hr>
+        </ul>
+    </div>
+    </aside>
+    <div class="h-100 p-ab">
+        <button  class="button square pos-absolute pos-top-right kiko"
+                id="sidebar-toggle-2">
+            <span class="mif-menu"><b>All</b></span>
+        </button>
+    </div></li>
+    <li><a href="#" class="app-bar-item k">Today's Deals</a></li>
+    <li><a href="#" class="app-bar-item k">Register</a></li>
+    <li><a href="#" class="app-bar-item k">CustomerService</a></li>
+    <li><a href="#" class="app-bar-item k">Gift Cards</a></li>
+    <li><a href="#" class="app-bar-item k">Sell</a></li>
+</ul>
+</div>

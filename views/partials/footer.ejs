@@ -1,0 +1,482 @@
+<style>
+    .footer1{
+        width: 100%;
+        height: 40px;
+        background-color: #37475A;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+        font-size: smaller;
+        font-weight: 500;
+    }.footer1:hover{
+        background-color: #475a70;
+        text-decoration: none;
+    }.back-to-top{
+        text-decoration: none;
+    }
+    .footer2{
+        padding: 5px;
+        display: flex;
+      width:100%;
+      height:400px;
+    background-color: #232f3e;
+    border-left:180px #232f3e solid;
+    border-top:70px #232f3e solid;
+    border-right:100px #232f3e solid;
+    } .footerul{
+       height: 100px;
+       width: 400px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        font-size: small;
+       
+        
+    }h2{
+        
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+    }.footer2-a{
+        color: #DDD;
+    }.footer2-a:hover{
+        border: 1px #232f3e solid ;
+        border-radius:3px ;
+    }.footerul2{
+        position: relative;
+        top: 18px;
+    }.footerul3{
+        position: relative;
+        top:-22px;
+    }.footerul4{
+        position: relative;
+        top: 15px;
+    }.footer3{
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        border-top:1px #3a4553 solid;
+        width: 100%;
+        background-color:#232f3e;
+        height: 100px;
+    }.footer3-img-div{
+        align-items: center;
+        justify-content: flex-end;
+        display: flex;
+        width: 10%;
+        height: 90px;
+        margin-top: 10px;
+    }
+    .footer3-img{
+        width: 74px;
+        height: 28px;
+    }.footer3-right{
+        margin-left: -250px;
+        align-items: center;
+        justify-content: space-evenly;
+        display: flex;
+        /* background-color: red; */
+        width: 36%;
+        height: 100px;
+    }
+    .footer3-a{
+        display: flex;
+        color: #DDD;
+        border: 1px #8b929b solid;
+        border-radius:3px ;
+        width: 150px;
+        height: 35px;
+        justify-content: flex-start;
+       align-items: center;
+       font-size: 13px;
+    }.footer3-right-span{
+        width: 20px;
+        margin-left: 10px;
+    }.flag2{
+        position: relative;
+        top: 3.5px;
+        left:-5px;
+    }.footer4{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+       align-items:flex-start;
+        border-top: 40px #131A22 solid;
+        border-right: 70px #131A22 solid;
+        border-left: 100px #131A22 solid;
+        width: 100%;
+        height: 450px;
+        background-color: #131A22;
+    }.div-t{
+        display: flex;
+        justify-content: space-around;
+         width:100%;
+         height: 70px;
+         /* background-color: red; */
+    }.div-content{
+        font-size: small;
+        color: #DDD;
+        width: 150px;
+        height: 70px;
+        /* background-color: green; */
+    }.div-t4{
+        margin-left: -173px;
+        display: flex;
+        justify-content: space-around;
+         width:86%;
+         height: 70px;
+         /* background-color: red; */
+    }.anker{
+        color: #DDD;
+    }.anker:hover{
+        text-decoration: underline;
+    }
+    .anker-bold{
+        color: #fff;
+    }.footer5{
+        display: flex;
+        /* justify-content: center; */
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        height: 80px;
+        background-color: #131A22;
+        border-top:10px #131A22 solid;
+    } .footer5-top{
+        width:370px;
+        display: flex;
+        justify-content: space-around;
+        /* background-color: green; */
+        align-items: center;
+    }.footer5-a{
+        color: #DDD;
+     font-size: 12px;
+    }.footer5-a:hover{
+        text-decoration: underline;
+    } .footer5-p{
+        color: #DDD;
+     font-size: 12px;
+    }.position{
+        position: relative;
+        
+    }.footerzero{
+        width: 100%;
+        height: 150px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }.footerzero-p1{
+        font-size: 13px;
+    }.footerzero-p2{
+        font-size:11px;
+    }.footerzero-div{
+        width: 100%;
+        text-align: center;
+        height: 300px;
+    }.footerzero-button{
+        position: relative;
+        top: 10px;
+        width: 230px;
+        height: 30px;
+        font-weight: 700;
+        font-size: 14px;
+            text-shadow: 0 1px 0 #ffe093;
+            background: linear-gradient( yellow,#fcd980,gold);
+            border: 1px gold solid;
+            border-radius:2px ;
+            cursor: pointer;
+    }.emty{
+        width: 100%;
+        height: 500px;
+        background-color:#fff;
+    }
+</style>
+<% if(!currentUser){%>
+<div class="footerzero">
+<div class="footerzero-div">
+    <hr>
+    <p class="footerzero-p1"> See personalized recommendations</p>
+ 
+    <a href="/login"><button class="footerzero-button">sign in</button></a>
+    <p class="footerzero-p2">New customer? <a href="/">Start here.</a></p>
+    <hr>
+    </div>
+</div>
+<%}%>
+<div class="position">
+<a href="#img1" class="back-to-top"><div class="footer1">Back to top</div></a>
+<div class="footer2">
+    <ul class="footerul footerul1">
+        <h2>Get to Know Us</h2>
+        <div><a  href="/" class="footer2-a">Careers</a></div>
+        <div><a  href="/" class="footer2-a">Blog</a></div>
+        <div><a  href="/" class="footer2-a">About Amazon</a></div>
+        <div><a  href="/" class="footer2-a">Investor Relations</a></div>
+        <div><a  href="/" class="footer2-a">Amazon Devices</a></div>
+        <div><a  href="/" class="footer2-a">Amazon Science</a></div>
+
+    </ul>
+
+    <ul class="footerul footerul2">
+        <h2>Make Money with Us</h2>
+        <div><a  href="/" class="footer2-a">Sell products on Amazon</a></div>
+        <div><a  href="/" class="footer2-a">Sell on Amazon Business</a></div>
+        <div><a  href="/" class="footer2-a">Sell apps on Amazon</a></div>
+        <div><a  href="/" class="footer2-a">Become an Affiliate</a></div>
+        <div><a  href="/" class="footer2-a">Advertise Your Products</a></div>
+        <div><a  href="/" class="footer2-a">Self-Publish with Us</a></div>
+        <div><a  href="/" class="footer2-a">Host an Amazon Hub</a></div>
+        <div><a  href="/" class="footer2-a">›See More Make Money with Us</a></div>
+    
+        
+    </ul >
+    <ul class="footerul footerul3">
+        <h2>Amazon Payment Products</h2>
+        <div><a  href="/" class="footer2-a">Amazon Business Card</a></div>
+        <div><a  href="/" class="footer2-a">Shop with Points</a></div>
+        <div><a  href="/" class="footer2-a">Reload Your Balance</a></div>
+        <div><a  href="/" class="footer2-a">Amazon Currency Converter</a></div>
+    </ul>
+    <ul class="footerul footerul4">
+        <h2>Let Us Help You</h2>
+        <div><a  href="/" class="footer2-a">Amazon and COVID-19</a></div>
+        <div><a  href="/" class="footer2-a">Your Account</a></div>
+        <div><a  href="/" class="footer2-a">Your Orders</a></div>
+        <div><a  href="/" class="footer2-a">Shipping Rates & Policies</a></div>
+        <div><a  href="/" class="footer2-a">Returns & Replacements</a></div>
+        <div><a  href="/" class="footer2-a">Manage Your Content and Devices</a></div>
+        <div><a  href="/" class="footer2-a">Amazon Assistant</a></div>
+        <div><a  href="/" class="footer2-a">Help</a></div>
+    </ul>
+</div>
+<div class="footer3">
+    <div class="footer3-img-div">
+   <img class="footer3-img" src="https://jitsvinger.co.za/wp-content/uploads/2018/04/Amazon-Logo-1024x373-400x146.png" alt="">
+   </div> 
+   <div class="footer3-right">
+        <a href="/" class="footer3-a"><span class="footer3-right-span">&#127760;</span> English</a>
+        <a href="/" class="footer3-a"><span class="footer3-right-span dollar">&dollar;</span> USD-U.S. Dollar</a>
+        <a href="/" class="footer3-a"><img class="flag flag2" src="https://hotemoji.com/images/dl/0/american-flag-emoji-by-google.png"> United States</a>
+    </div>
+</div>
+
+<div class="footer4">
+    <div class="div-t">
+        <div class="div-content"><p>
+          <a href="/" class="anker">  <b class="anker-bold">Amazon Music</b><br>
+            Stream millions<br>
+            of songs </a></p></div>
+        <div class="div-content">
+            <p>
+                <a href="/" class="anker">  <b class="anker-bold">Amazon Ads</b><br>
+                    Reach customers
+                    wherever they<br>
+                    spend their time</a>
+            </p>	
+        </div>
+        <div class="div-content">
+            <p>
+                <a href="/" class="anker">  <b class="anker-bold">6pm</b><br>
+                    
+Score deals<br>
+on fashion brands	</a>
+            </p>
+        </div>
+        <div class="div-content">
+            <p>
+                <a href="/" class="anker">  <b class="anker-bold">AbeBooks</b><br>	
+                    Books, art<br>
+                    & collectibles </a>
+            </p>
+        </div>
+        <div class="div-content">
+            
+
+<p>
+    <a href="/" class="anker">  <b class="anker-bold">ACX</b><br>	
+        Audiobook Publishing
+<br>Made Easy</a>
+</p>
+        </div>
+        <div class="div-content">
+            <p>
+                <a href="/" class="anker">  <b class="anker-bold">Sell on Amazon</b><br>	
+                    Start a Selling
+            <br>Account</a>
+            </p>
+            
+
+        </div>
+        <div class="div-content">
+            <p>
+                <a href="/" class="anker">  <b class="anker-bold">Amazon Business</b><br>	
+                    Everything For
+                    
+            <br>Your Business</a>
+            </p>
+        </div>
+    </div>   
+    
+    <div class="div-t">
+        <div class="div-content">
+            <p>
+                <a href="/" class="anker">  <b class="anker-bold">Amp</b><br>	
+                    Host your own <br> live radio show <br>with
+            <br>music you love</a>
+            </p>
+        </div>
+        <div class="div-content">
+            <p>
+                <a href="/" class="anker">  <b class="anker-bold">AmazonGlobal</b><br>Ship Orders<br>Internationally</a>
+            </p>
+        </div>
+        <div class="div-content">
+            <p>
+                <a href="/" class="anker">  <b class="anker-bold">Home Services</b><br>Experienced Pros<br>Happiness<br> Guarantee</a>
+            </p>
+        </div>
+        <div class="div-content">
+            <p>
+                
+
+	
+                <a href="/" class="anker">  <b class="anker-bold">Amazon Web Services</b><br>Scalable Cloud<br>Computing<br> Services</a>
+            </p>
+        </div>
+        <div class="div-content">
+            <p>
+	
+                <a href="/" class="anker">  <b class="anker-bold">Audible</b><br>Listen to Books & <br>Original<br>Audio Performances</a>
+            </p>
+        </div>
+        <div class="div-content">
+            
+<p>
+<a href="/" class="anker">  <b class="anker-bold">Box Office Mojo</b><br>Find Movie
+    <br>Box Office Data</a>
+</p>
+        </div>
+        <div class="div-content">
+            <p>
+                
+
+                <a href="/" class="anker">  <b class="anker-bold">Goodreads</b><br>Book reviews
+
+                    <br>&<br>recommendations</a>
+                </p>
+        </div>
+    </div>
+    <div class="div-t">
+        <div class="div-content">
+            <p>
+                
+
+
+                <a href="/" class="anker">  <b class="anker-bold">IMDb</b><br>Movies, TV
+
+                    <br>& Celebrities</a>
+                </p>
+        </div>
+        <div class="div-content">
+            <p>
+                
+
+
+                <a href="/" class="anker">  <b class="anker-bold">IMDbPro</b><br>Get Info
+                    
+                     
+                     
+                    <br>Entertainment <br>Professionals Need</a>
+                </p>
+        </div>
+        <div class="div-content">
+            
+             
+            <p>
+                
+
+
+                <a href="/" class="anker">  <b class="anker-bold">Kindle Direct Publishing</b><br>Indie Digital &
+
+                    <br>Print Publishing<br>            Made Easy
+                </a>
+                </p>
+        </div>
+        <div class="div-content">
+             
+            <a href="/" class="anker">  <b class="anker-bold">Prime Video</b><br>Direct
+                Video <br> Distribution
+                    
+                     
+                     
+                <br>            Made Easy              </a>
+            </p>
+
+        </div>
+        <div class="div-content">
+            <p><a href="/" class="anker">  <b class="anker-bold">Shopbop</b><br>Designer<br>Fashion Brands</a></p>
+        </div>
+        <div class="div-content">
+            
+
+            <p><a href="/" class="anker">  <b class="anker-bold">Woot!</b><br>Deals and<br>Shenanigans
+            </a></p>
+
+        </div>
+        <div class="div-content">
+            <p><a href="/" class="anker">  <b class="anker-bold">Zappos</b><br>Shoes &<br>Clothing</a></p>
+        </div>
+    </div>
+    <div class="div-t4">
+        <div class="div-content">
+            <p><a href="/" class="anker">  <b class="anker-bold">Ring</b><br>Smart Home<br> Security Systems</a></p>
+            
+        </div>
+        <div class="div-content">
+            <p><a href="/" class="anker">  <b class="anker-bold">eero WiFi</b><br>Stream 4K Video<br>in Every Room
+            </a></p>
+
+        </div>
+        <div class="div-content">
+            <p><a href="/" class="anker">  <b class="anker-bold">Blink</b><br>Smart Security
+                <br>for Every Home
+            </a></p>
+            
+        </div>
+        <div class="div-content">
+            
+<p><a href="/" class="anker">  <b class="anker-bold">Neighbors App</b><br>Real-Time<br>Crime
+    <br>& Safety Alerts
+</a></p>	
+        </div>
+        <div class="div-content">
+             
+ 
+            <p><a href="/" class="anker">  <b class="anker-bold">Amazon Subscription</b><br>Boxes<br>Top subscription boxes
+                <br>– right to your door
+            </a></p>
+        </div>
+        <div class="div-content">
+            
+ 
+            <p><a href="/" class="anker">  <b class="anker-bold">PillPack</b><br>Pharmacy<br>Simplified
+            </a></p>
+        </div>
+    </div>
+    </div>
+    <div class="footer5">
+            <div class="footer5-top">
+                <a href="/" class="footer5-a">Conditions of Use</a>
+                <a href="/"  class="footer5-a">Privacy Notice</a>
+                <a href="/" class="footer5-a">Your Ads Privacy Choices</a>
+            </div>
+            <div class="footer5-bottom">
+                <p class="footer5-p">© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+            </div>
+    </div>
+</div>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css">
+    <title>Amazon.com</title>
+</head>
+<body>
+    <style>
+     .body{
+        width: 100%;
+        height: 1000px;
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: space-between;
+        /* flex-direction: column; */
+        /* align-items: center; */
+        border-left: 100px white solid ;
+     }.img1{
+        
+        width: 100px;
+        height: 38px;
+        /* background-color: red; */
+        cursor: pointer;
+    }.login-body{
+        width: 60%;
+        height: fit-content;
+        border-radius:10px;
+        /* background-color: red; */
+        padding: 25px;
+        border:1px rgb(231, 229, 229) solid;
+    }.login-body-h1{
+        font-size: 28px;
+        font-weight: 400;
+    }#email{
+        width: 98.5%;
+        border-radius: 5px;
+        border: 2px rgb(231, 229, 229) solid ;
+    }.login-p{
+        font-weight: 700;
+        font-size: small;
+    }.cart-button{
+        background-color: #FFD814;
+        border-radius: 7px;
+        width:100%;
+        height: 30px;
+        border:1px #FFD814 solid;
+        font-size: small;
+        font-weight: 500; 
+       cursor: pointer;
+      }#cart-form{
+        display: flex;
+        width: 101%;
+        /* background-color: red; */
+        height: 460px;
+        flex-direction: column;
+        justify-content:space-evenly;
+        /* align-items: center; */
+      }.cart-button:hover{
+        cursor: pointer;
+        background-color:rgb(252, 210, 0) ;
+        border:1px rgb(252, 210, 0) solid ;
+      }.login-privce{
+        font-size:12px;
+        font-weight: 400; 
+      }.br{
+          width: 100%;
+          height: 1px;
+          background-color: rgb(231, 229, 229);
+      }.login-secbody{
+        width: 340px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 100px;
+        /* border-radius:10px; */
+        /* background-color: red; */
+      }.cart-secbutton{
+        background-color: #FFF;
+        border-radius: 7px;
+        width:100%;
+        height: 60%;
+        border:1px rgb(231, 229, 229) solid;
+        font-size: small;
+        font-weight: 500; 
+       cursor: pointer;
+      }.cart-secbutton:hover{
+        cursor: pointer;
+        background-color:#D5D9D9 ;
+        border:1px rgb(231, 229, 229) solid ;
+      }.footer5{
+        display: flex;
+        /* justify-content: center; */
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        height: 80px;
+        background-color:#FFF;
+        border-top:10px #FFF solid;
+    } .footer5-top{
+        width:370px;
+        display: flex;
+        justify-content: space-around;
+        /* background-color: green; */
+        align-items: center;
+    }.footer5-a{
+        /* color: #DDD; */
+     font-size: 12px;
+    }.footer5-a:hover{
+        text-decoration: underline;
+    } .footer5-p{
+        color: gray;
+     font-size: 12px;
+    }.cart-secform{
+        display: flex;
+        width: 101%;
+        /* background-color: red; */
+        height: 55px;
+        justify-content: center;
+        align-items: center;
+    }
+    /* newdata */
+    .stock{
+        color: rgb(13, 95, 13);
+        font-weight: 400;
+        font-size:larger;
+      }
+      .cart-button2{
+        background-color: #FFD814;
+        border-radius: 25px;
+        width:90%;
+        height: 70%;
+        border:1px #FFD814 solid;
+        font-size: small;
+        font-weight: 500;  
+      }.cart-form2{
+        display: flex;
+        width: 100%;
+        /* background-color: red; */
+        height: 45px;
+        justify-content: center;
+        align-items: center;
+      }.buy-button2{
+        background-color: rgb(255, 164, 28);
+        border-radius: 25px;
+        width:90%;
+        height: 70%;
+        border:1px rgb(255, 164, 28) solid;
+        font-size: small;
+        font-weight: 500; 
+      }.buy-button2:hover{
+        cursor: pointer;
+        background-color:rgb(255, 143, 0) ;
+        border:1px rgb(255, 143, 0) solid ;
+      }.cart-button2:hover{
+        cursor: pointer;
+        background-color:rgb(252, 210, 0) ;
+        border:1px rgb(252, 210, 0) solid ;
+      }.third-show{
+        position: sticky;
+        top: 0px;
+        padding: 10px;
+        width: 19%;
+        height: fit-content;
+        /* background-color: red; */
+        border: 1px black solid;
+        border:1px rgb(231, 229, 229) solid;
+        border-radius: 10px;
+    }.paymentform-nav{
+        width: 100%;
+        height: 80px;
+        /* background-color: #D5D9D9; */
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }.na{
+        color: white;
+    }.bb{
+      background-color: black;
+    }
+    </style>
+    <div class="paymentform-nav">
+        <a   href="/"><img  class="img1" src="http://vrworld.com/wp-content/uploads/2014/06/Amazon-Logo1.jpg"></a>
+       
+     <h1 class="na">cart</h1>
+     <h1 class="na">cart</h1>
+     
+    </div>
+        <main class="body">
+     <div class="login-body">
+    <h1 class="login-body-h1">Add a new address</h1>
+    
+<form id="cart-form" action="/paymentform" method="POST" data-role="validator" >
+    <p class="login-p">Country/Region</p>
+<input type="text" data-role="input" id="email" data-validate="required" name="order[country]">
+    <p class="login-p">Full name (First and Last name)</p>
+<input type="text" data-role="input" id="email" data-validate="required" name="order[fullname]">
+    <p class="login-p">Phone number</p>
+<input type="number" data-role="input" id="email" data-validate="required number" name="order[phonenumber]">
+<p class="login-p">Address</p>
+<input type="text" data-role="input" id="email" data-validate="required" name="order[address]">
+<p class="login-p">City</p>
+<input type="text" data-role="input" id="email" data-validate="required" name="order[city]">
+
+
+    <button class="cart-button"  >Submit</button>
+</form>
+
+  <p class="login-privce">By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.</p>
+  <div class="br"></div>
+  <p class="login-p">Buying for work?</p>
+  <p class="login-privce">Return to <a href="/cart">Cart</a></p>
+     </div>
+
+     <section class="third-show">
+        <h4></h4>
+        <p class="footer5-p">$47.31 Shipping & Import Fees Deposit</p>
+        <br>
+        <h5 class="stock">In Stock</h5>
+        <div class="br"></div>
+        <p class="footer5-p">Choose a shipping address to continue checking out. You'll still have a chance to review and edit your order before it's final.</p>
+          
+        <div class="br"></div>
+        <p class="footer5-p">Ships from
+            Amazon
+            Sold by
+            Amazon
+            Returns
+            Returnable until Jan 31, 2024
+            Payment
+            Secure transaction</p>
+            
+            <h5 class="stock">$ <%= cart[0].price%></h5>
+            <%if(cart[1] !== undefined){%>
+            <h5 class="stock">+$<%=cart[1].price%></h5>
+            <%}%>
+            <%if(cart[2] !== undefined){%>
+              <h5 class="stock">+$<%=cart[2].price%></h5>
+              <%}%>
+              <%if(cart[3] !== undefined){%>
+                <h5 class="stock">+$<%=cart[3].price%></h5>
+                <%}%>
+                <%if(cart[4] !== undefined){%>
+                  <h5 class="stock">+$<%=cart[4].price%></h5>
+                  <%}%>
+                  <%if(cart[5] !== undefined){%>
+                    <h5 class="stock">+$<%=cart[5].price%></h5>
+                    <%}%>
+                    <%if(cart[6] !== undefined){%>
+                      <h5 class="stock">+$<%=cart[6].price%></h5>
+                      <%}%>
+                      <%if(cart[7] !== undefined){%>
+                        <h5 class="stock">+$<%=cart[7].price%></h5>
+                        <%}%>
+                        <%if(cart[8] !== undefined){%>
+                          <h5 class="stock">+$<%=cart[8].price%></h5>
+                          <%}%>
+                          <%if(cart[9] !== undefined){%>
+                            <h5 class="stock">+$<%=cart[9].price%></h5>
+                            <%}%>
+                          <%if(cart[10] !== undefined){%>
+                            <h5 class="stock">+$<%=cart[10].price%></h5>
+                            <%}%>
+                            <a class="footer5-p" href="/cart">Return to cart</a>
+       </section>
+    </main>
+    <div class="footer5">
+        <div class="footer5-top">
+            <a href="/" class="footer5-a">Conditions of Use</a>
+            <a href="/"  class="footer5-a">Privacy Notice</a>
+            <a href="/" class="footer5-a">Your Ads Privacy Choices</a>
+        </div>
+        <div class="footer5-bottom">
+            <p class="footer5-p">© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+        </div>
+</div>
+</div>
+
+
+</body>
+</html>

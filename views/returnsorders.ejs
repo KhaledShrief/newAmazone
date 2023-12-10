@@ -1,0 +1,189 @@
+
+     
+             
+<%layout("./styling/boilarplate.ejs")%>
+<style>
+  
+.card-body{
+        padding: 0px;
+        /* display: flex; */
+        /* flex-wrap:wrap; */
+        width: 80%;
+        height:max-content;
+       position: relative;
+       /* flex-direction: column; */
+       /* top: 80px; */
+       z-index: 2;
+        border: 15px rgb(231, 229, 229) solid;
+        padding: 20px;
+    border-top:30px rgb(231, 229, 229) solid ;
+    min-height: 400px;
+    }
+    .card{
+        
+        justify-content: space-evenly;
+        border: 1px white solid;
+        display: flex;
+        
+        width: 100%;
+        height: 220px;
+        /* background-color: red; */
+    }.card-img{
+        
+        left:-40px;
+        top:-10px;
+        width: 170px;
+        height: 200px;
+    }.card-p{
+        position: relative;
+        top: 8px;
+        cursor: pointer;
+    }.br{
+          width: 100%;
+          height: 1px;
+          background-color: rgb(231, 229, 229);
+      }.card-h6{
+        font-weight: 400;
+        font-size: medium;
+      }.card-h6-body{
+        width: 70%;
+        padding: 10px;
+        /* height: fit-content; */
+        /* background-color: green; */
+      }.stock{
+        color: rgb(13, 95, 13);
+        font-weight: 400;
+        font-size:larger;
+      }.price-button{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        width: 10%;
+        /* background-color: red; */
+      }.main-show{
+        /* position: relative; */
+        /* top:130px; */
+        width: 100%;
+        height: fit-content;
+        display: flex;
+       
+    }.third-show{
+        
+        width: 20%;
+        /* height: 100%; */
+        border: 15px rgb(231, 229, 229) solid;
+        padding: 20px;
+    border-top:30px rgb(231, 229, 229) solid ;
+    }.cart-button{
+        background-color: #FFD814;
+        border-radius: 25px;
+        width:90%;
+        height: 70%;
+        border:1px #FFD814 solid;
+        font-size: small;
+        font-weight: 500; 
+       cursor: pointer;
+      }.cart-form{
+        display: flex;
+        width: 100%;
+        /* background-color: red; */
+        height: 45px;
+        justify-content: center;
+        align-items: center;
+      }.cart-button:hover{
+        cursor: pointer;
+        background-color:rgb(252, 210, 0) ;
+        border:1px rgb(252, 210, 0) solid ;
+      }.stock2{
+        color: red;
+        font-weight: bolder;
+      }
+</style>
+<main class="main-show">
+<div class="card-body">
+    <h3>Your Orders</h3>
+    <div class="br"></div>
+    <%if(submitted.length !== 0){%>
+    <%for(let i = 0; i < submitted.length; i++ ){%>
+    <div class="card card-p">
+        <a href="/"> <img class="card-img" src="<%=submitted[i].cart[i][i].image%>"></a>
+        <div class="card-h6-body">
+        <h5 class="card-h6"><%=submitted[i].cart[i][i].price%></h5>
+       
+        <h5 class="stock">Waiting for Delivery</h5>
+        <h5 class="card-h6"><%=submitted[i].tottal%></h5>
+        <h5 class="stock">Tottal Price:$<%=submitted[i].tottal%></h5>
+        <p><%=submitted[i].cart[i][i].title%></p>    
+    </div>
+        <div class="price-button">
+        <h5 class="card-h6"><%=submitted[i].tottal%></h5>
+        <form action="/returnsorders?_method=DELETE" method="POST">
+            
+            <button name="order[id]" class="button alert" value="<%=submitted[i]._id%>">Cancel</button>
+        </form>    
+        </div>
+    </div>
+        <div class="br"></div>
+    <%}%>
+    <%} else{%>
+        <div class="card card-p">
+            
+            <div class="card-h6-body">
+            <h5 class="card-h6"></h5>
+           
+            <h1 class="stock2">Opps, It Seems That You Don't Have An Order With Amazon</h1>
+            <h5 class="card-h6"></h5>
+            <h5 class="stock"></h5>
+            <p></p>    
+        </div>
+            <div class="price-button">
+            <h5 class="card-h6"></h5>
+            <form action="/returnsorders?_method=DELETE" method="POST">
+                
+                
+            </form>    
+            </div>
+        </div>
+            <div class="br"></div>
+        <%}%>
+</div>
+<section class="third-show">
+    <h4></h4>
+    <p>$47.31 Shipping & Import Fees Deposit</p>
+    <br>
+    <h5 class="stock">In Stock</h5>
+    <div class="br"></div>
+    <form class="cart-form" action="/paymentform">
+    
+      <button class="cart-button"  value="">Procced to Checkout</button>
+
+        
+        
+    </form>
+    
+    <div class="br"></div>
+    <p>Ships from
+        Amazon
+        Sold by
+        Amazon
+        Returns
+        Returnable until Jan 31, 2024
+        Payment
+        Secure transaction</p>
+   </section>
+</main>
+<script>
+  const cart = document.querySelector(".top3")
+  const button = document.querySelector(".cart-button")
+ 
+  let num = 0;
+function increment(){
+num = num +1
+cart.innerHTML =0+num;
+}
+   
+  
+
+</script>
+ 

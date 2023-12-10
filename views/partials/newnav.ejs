@@ -1,0 +1,374 @@
+
+    <style>
+        body{
+            margin:0;
+            padding: 0%;
+        }
+        .nav1{
+            width: 100%;
+            height:60px;
+            background-color: #131921;
+            display: flex;
+            align-items: center;
+            /* justify-content:space-around; */
+           z-index: 4;
+        }.img1{
+            position: relative;
+            top:2px;
+        width: 120px;
+        height: 50px;
+        /* background-color: green; */
+    }.img1:hover{
+        border-radius: 3px;
+        border: 1px white solid;
+        cursor: pointer;
+    }.signin:hover{
+        border-radius: 3px;
+        border: 1px white solid;
+    }.top{
+        position: relative;
+        top:10px;
+        font-weight: 100;
+        font-size: smaller;
+    }.bottom{
+        position: relative;
+        /* left:-5px; */
+        bottom: -5px;
+    }.signin{
+        text-align: center;
+    height: 40px;
+    color: white;
+    text-decoration: none;
+    height: 58px;
+    width: 100px;
+    /* background-color: #febd69; */
+    }.nav-form{
+
+       width:670px;
+       height: 40px;
+        /* margin-top: 10px; */
+        padding: 0%;
+        display: flex;
+        /* margin-left: -250px; */
+        /* background-color: aqua; */
+    }.all{
+       position: relative;
+       top:-16px;
+       left: 17px;
+      background-color: #e6e6e6;
+      width: 100px;
+      height: 40px;
+      color: black;
+      border: 2px #e6e6e6 solid;
+      padding: 8px;
+      display: flex;
+      font-size: small;
+      list-style: none;
+      /* background-color: #febd69; */
+      border-radius: 5px 0px 0px 5px;
+      /* text-decoration: none; */
+    }  .width{
+        width: 500px;
+        outline: none;
+        height: 40px;
+        border: none;
+        box-shadow:0px 1px 5px rgba(0,0,0,0.1) ;
+    }.search{
+        position: relative;
+        left: -1px;
+        width:70px;
+        font-weight: 800;
+        font-size: larger;
+        color:rgb(71, 60, 60);
+        background-color: #febd69;
+        border: 2px #febd69 solid;
+        border-radius: 0px 5px 5px 0px  ;
+    }.flag{
+        width: 30px;
+        height: 30px;
+        /* margin-top: -5px; */
+    }.select{
+        background-color: #131921;
+        color: #e6e6e6;
+        border: 1px #131921 solid;
+    }.flag-container{
+        /* background-color: blue; */
+        display:  flex;
+        align-items: center;
+        width: 100px;
+        /* justify-content: center; */
+    }.top1{
+        position: relative;
+        top:10px;
+        left: -12px;
+        font-weight: 100;
+        font-size: smaller;
+    }.bottom1{
+        position: relative;
+        left:5px;
+        bottom: -5px;
+    }.signin1{
+        text-align: center;
+    height: 40px;
+    color: white;
+    text-decoration: none;
+    height: 55px;
+    width: 140px;
+    /* background-color: #febd69; */
+    }.signin1:hover{
+        border-radius: 3px;
+        border: 1px white solid;
+    }
+    .top2{
+        position: relative;
+        top:10px;
+        left: -16px;
+        font-weight: 100;
+        font-size: smaller;
+    }.bottom2{
+        position: relative;
+        /* left:-5px; */
+        bottom: 16px;
+    }.signin2{
+        text-align: center;
+    height: 40px;
+    color: white;
+    text-decoration: none;
+    height: 58px;
+    width: 110px;
+    /* background-color: #febd69; */
+    }.signin2:hover{
+        border-radius: 3px;
+        border: 1px white solid;
+    }.nav{
+        
+        width: 100%;
+        position:relative;
+        /* margin-top:-75px; */
+        display: flex;
+        height: 40px;
+        background-color: #232f3e;
+            z-index: 3;
+            /* top: 55px; */
+    }.mk{
+        display:block;
+  width:0px;
+  height:600px;  
+justify-content:space-around;
+margin-left:-20;
+ padding-top:30px;
+ font-size:20px;
+ min-width:50px;
+ text-align:center;
+ position:fixed;
+ top:12;
+overflow:auto;
+  z-index:2 ;
+  /* background-color: aqua; */
+    }.nav-ul{
+        display: flex;
+        text-decoration: none;
+        height: 20px;
+        width: 40%;
+        justify-content: space-evenly;
+       /* background-color: green; */
+
+    }.nav-li{
+        margin-top: -16px;
+        display: flex;
+        text-decoration: none;
+        justify-content: space-around;
+        height: 40px;
+        width: 100px;
+        padding: 1px;
+        /* background-color: red; */
+    }.km{
+        margin-top: -30px;
+        margin-bottom: 20px;
+        
+    }.head{
+              /* position: relative; */
+              /* top:1px;   */
+                width: 100%;
+                height: 35px;
+                background-color: #232f3e;
+                color: white;
+                font-size: large;
+                z-index: 1;
+            }.k{
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: small;
+        color: white;
+        text-decoration: none;
+       /* background-color: red; */
+    }.nav-li:hover{
+        border-radius: 3px;
+        border: 1px white solid;
+    
+    }.kiko{
+        background-color: #232f3e;
+       color: white;
+       font-weight: 500;
+       font-size: large;
+    }#all{
+        color: black;
+        text-decoration: none;
+    }.autoComplite{
+        width: 472px;
+        overflow: auto;
+        height: fit-content;
+        background-color: #fff;
+        box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+        list-style: none;
+        position: absolute;
+        top:40px;
+        left:129px;
+        /* overflow-y: auto; */
+    }.autoComplite li{
+        cursor: pointer;
+        width: 100%;
+        opacity: 0;  
+        pointer-events: none; 
+        display: none;                   
+    }.autoComplite li:hover{
+        background-color: #e6e6e6;
+    }.nav-form .autoComplite{
+    
+        
+        overflow-y: none;
+    }.nav-form.active .autoComplite{
+        padding: 10px 8px;
+        opacity:1;
+        pointer-events:auto;
+        overflow-y: auto;
+    }.nav-form.active .autoComplite li{
+        opacity:1;
+
+        display: block;  
+    }
+    </style>
+    <div class ="nav1">
+        <a  href="/"><img class="img1" src="https://jitsvinger.co.za/wp-content/uploads/2018/04/Amazon-Logo-1024x373-400x146.png"></a>
+        <a href="#" class="app-bar-item signin"><p class="top">Deliver to</p><b class="bottom"><i class="fa fa-map-marker"></i>Egypt</b></a>
+        <form class="nav-form">
+            <ul class="all">
+            <li >
+                <a href="#" id="all" class="dropdown-toggle ">All</a>
+                <ul class="d-menu" data-role="dropdown">
+                  
+                    <li ><a href="/deals">Electronics</a></li>
+                    <li class="divider">T.V</li>
+                    <li ><a href="/deals">T.V'S</a></li>
+                    <li class="divider">T.V</li>
+                    <li><a href="/fashon">Fashon & Beauty</a></li>
+                    <li class="divider">T.V</li>
+                    <li><a href="/makeup">Makeup</a></li>
+                    <li class="divider">T.V</li>
+                    <li><a href="/fashon">Kidds Clothes</a></li>
+                </ul>
+            </li>
+        </ul>
+        
+        <input class="width" placeholder="Search Amazone" type="text" data-role="input" name="query" data-search-button="false">
+       
+        <button class="search" ><i class="fa fa-search"></i></button>
+    </form>
+    <div class="flag-container">
+        <img class="flag" src="https://hotemoji.com/images/dl/0/american-flag-emoji-by-google.png">
+        
+            <select class="select">
+                <option>EN</option>
+            </select>
+        </div>
+        <% if(!currentUser){%>
+            <a href="/login" class="app-bar-item signin1"><p class="top1">Hello,sign in</p> <b class="bottom1">Account&Lists</b></a>
+            <%}else{%>
+                <a href="/logout" class="app-bar-item signin1"><p class="top1"><%=currentUser.username%>,sign Out</p> <b class="bottom1">Account&Lists</b></a>
+                <%}%> 
+            <a href="/returnsorders" class="app-bar-item signin1"><p class="top1">Returns</p> <b class="bottom1">&Orders</b></a>
+            <a href="/cart" class="app-bar-item signin2"><span class="top2">0</span><p class="bottom2">&#128722;<b>Cart</b></p></a>
+
+    </div> 
+    <div class="nav">
+        <ul class="nav-ul">
+        <li class="nav-li  buto"><aside class="sidebar pos-absolute z-2 mk" data-role="sidebar" data-toggle="#sidebar-toggle-2">
+            <div class="km">
+                <% if(!currentUser){%>
+                <div class="head"><b >Hello, sign in</b></div>
+                <%}else{%>
+                    <div class="head"><b >Hello, <%=currentUser.username%></b></div>
+                    <%}%> 
+            <ul class="sidebar-menu d-menu">
+                <h5>Digital Content & Devices
+                </h5>
+                
+               
+                <li class="side-li"><a href="/deals">LCD</a></li>
+                <li class="side-li"><a href="/deals">T.V</a></li>
+                <hr>
+                <h5 >Shop By Department
+                </h5>
+                <li class="side-li"><a href="/fashon">Fashon & Beauty</a></li>
+                <li class="side-li"><a href="/makeup">Makeup</a></li>
+                <hr>
+                <h5>Programs & kidds
+                </h5>
+                <li class="side-li"><a href="/">Home</a></li>
+                <li class="side-li"><a href="/toys">Toys</a></li>
+                <li class="side-li"><a href="/fashon">Kidds Clothes</a></li>
+                <hr>
+                <h5>Help & Settings
+                </h5>
+                <% if(!currentUser){%>
+                <li class="side-li"><a href="/login">Sign In</a></li>
+                <li class="side-li"><a href="/register">Register</a></li>
+                <%}else{%>
+                <li class="side-li"><a href="/logout">Signout</a></li>
+                <%}%> 
+                <hr>
+            </ul>
+        </div>
+        </aside>
+        <div class="h-100 p-ab">
+            <button  class="button square pos-absolute pos-top-right kiko"
+                    id="sidebar-toggle-2">
+                <span class="mif-menu"><b>All</b></span>
+            </button>
+        </div></li>
+        <li class="nav-li"><a href="#" class="app-bar-item k">Today's Deals</a></li>
+        <%if(!currentUser){%>
+        <li  class="nav-li"><a href="/register" class="app-bar-item k">Register</a></li>
+        <%}%>
+        <li  class="nav-li"><a href="#" class="app-bar-item k">CustomerService</a></li>
+        <li  class="nav-li"><a href="#" class="app-bar-item k">Gift Cards</a></li>
+        <li  class="nav-li"><a href="#" class="app-bar-item k">Sell</a></li>
+    </ul>
+    </div>
+    
+
+<script>
+   
+    const sidebar = document.querySelector(".mk")
+    const buto = document.querySelector(".button")
+    const body = document.querySelector("body")
+    
+    body.addEventListener("click",function(){
+        sidebar.style.width = 0
+        // body.style.opacity ="1"
+    })
+    buto.addEventListener("click",function(){
+        sidebar.style.width = "23%"
+    //    body.style.opacity ="0.7"
+    //    body.style.backgroundColor ="black"
+
+    //    sidebar.style.opacity ="1"
+    })
+    const form = document.querySelector(".nav-form")
+    form.addEventListener("submit",async function(e){
+        e.preventDefault()
+        const searchTerm = form.elements.query.value;
+        console.log(searchTerm)
+        // const res = await axios.get
+    })
+</script>

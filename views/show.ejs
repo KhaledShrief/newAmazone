@@ -1,0 +1,124 @@
+<%layout("./styling/boilarplate.ejs")%>
+<style>
+    .main-show{
+        position: relative;
+        top:130px;
+        width: 100%;
+        height: 1000px;
+        display: flex;
+    }.section-show{
+        
+        width: 35%;
+        height: 90%;
+        
+        
+    }
+    .sec-show{
+        width: 45%;
+        height: 100%;
+        
+    }.third-show{
+        padding: 10px;
+        width: 19%;
+        height: 100%;
+        /* background-color: aqua;
+        border: 1px black solid; */
+    }#zoom{
+        position:sticky;
+        
+        top:0px;
+        
+    }.show-a{
+        color: #007185;
+    }.show-a:hover{
+        color: orange;
+    }.br{
+          width: 100%;
+          height: 1px;
+          background-color: gray;
+      }.stock{
+        color: rgb(13, 95, 13);
+        font-weight: 400;
+        font-size:larger;
+      }
+      .cart-button{
+        background-color: #FFD814;
+        border-radius: 25px;
+        width:90%;
+        height: 70%;
+        border:1px #FFD814 solid;
+        font-size: small;
+        font-weight: 500;  
+      }.cart-form{
+        display: flex;
+        width: 100%;
+        /* background-color: red; */
+        height: 45px;
+        justify-content: center;
+        align-items: center;
+      }.buy-button{
+        background-color: rgb(255, 164, 28);
+        border-radius: 25px;
+        width:90%;
+        height: 70%;
+        border:1px rgb(255, 164, 28) solid;
+        font-size: small;
+        font-weight: 500; 
+      }.buy-button:hover{
+        cursor: pointer;
+        background-color:rgb(255, 143, 0) ;
+        border:1px rgb(255, 143, 0) solid ;
+      }.cart-button:hover{
+        cursor: pointer;
+        background-color:rgb(252, 210, 0) ;
+        border:1px rgb(252, 210, 0) solid ;
+      }
+</style>
+<main class="main-show">
+    <section class="section-show">
+        <div data-role="imagemagnifier"
+    data-magnifier-mode="glass"
+    data-lens-type="circle"
+    data-lens-size="200"
+    data-height="400px"
+    data-width="430px"
+    id="zoom"
+>
+    <img src="<%=products.image%>">
+</div>
+       
+    </section >
+    <section class="sec-show">
+        <h1><%=products.title%></h1>
+        <a class="show-a" href="/"><%=products.category%></a>
+        <hr>
+        <h3>$<%=products.price%></h3>
+        <h5>Discription</h5>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum nam, hic alias eligendi odio, quasi distinctio provident dicta debitis aperiam dolore omnis eaque et ut expedita. Recusandae illo facilis quam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum nam, hic alias eligendi odio, quasi distinctio provident dicta debitis aperiam dolore omnis eaque et ut expedita. Recusandae illo facilis quam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum nam, hic alias eligendi odio, quasi distinctio provident dicta debitis aperiam dolore omnis eaque et ut expedita. Recusandae illo facilis quam?</p>
+    </section>
+   <section class="third-show">
+    <h4>$<%=products.price%></h4>
+    <p>$47.31 Shipping & Import Fees Deposit</p>
+    <br>
+    <h5 class="stock">In Stock</h5>
+    <div class="br"></div>
+    <form class="cart-form" action="/<%=products._id%>" method="POST">
+        <button class="cart-button" onclick="increment()" >Add to Cart</button>
+    </form>
+    <form class="cart-form" action="/paymentform">
+        <button class="buy-button">Buy Now</button>
+    </form>
+    <div class="br"></div>
+    <p>Ships from
+        Amazon
+        Sold by
+        Amazon
+        Returns
+        Returnable until Jan 31, 2024
+        Payment
+        Secure transaction</p>
+   </section>
+   
+</main>
