@@ -247,7 +247,12 @@ amazone.get("/paymentform/credit",isLoggedin,async(req,res)=>{
     }
   });
  })
-
+ amazone.get("/:id",async(req,res)=>{
+    
+  const products = await Products.findById(req.params.id);
+  
+  res.render("show.ejs",{products});
+  })
  amazone.get("/success",(req,res)=>{
   const payerId = req.query.PayerID;
   const paymentId = req.query.PaymentId;
