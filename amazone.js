@@ -10,7 +10,7 @@ const amazone = express();
 const path = require("path");
 const ejsMate = require("ejs-mate");
 const mongoose = require("mongoose");
-const dbUrl =   'mongodb://127.0.0.1:27017/amazone';
+const dbUrl = process.env.DB_URL ||  'mongodb://127.0.0.1:27017/amazone';
 const Products = require("./models/Products.js");
 const Cart = require("./models/cart.js")
 const methodOverride = require("method-override")
@@ -20,9 +20,10 @@ const passportLocal=require("passport-local")
 const flash = require("connect-flash")
 const User = require("./models/user.js")
 const Orders =require("./models/orders.js")
-const dbURL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/amazone'
+const secret = process.env.SECRET || "secret"
 const session = require("express-session")
 const MongoStore = require("connect-mongo")(session)
+const port = process.env.PORT || 3000
 mongoose.connect(dbUrl,{
     // useNewUrlParser:true,
     // useCreateIndex: true,
@@ -49,7 +50,7 @@ amazone.use(methodOverride("_method"))
 //session middleware
 const store = new MongoStore({
   url: dbUrl,
-  secret:"secret",
+  secret,
   touchAfter: 24*60*60
 })
 
@@ -58,7 +59,7 @@ store.on("error",function(e){
 })
 const sessionSecret ={
     store,
-    secret:"my secret",
+    secret,
     resave:false,
     saveUninitialized:true,
     cookie:{
@@ -410,6 +411,6 @@ amazone.post("/:id",async(req,res)=>{
 
 
 
-amazone.listen(3000,()=>{
-    console.log("serving on port 3000")
+amazone.listen(port,()=>{
+    console.log(`serving on port ${port}`)
 })
