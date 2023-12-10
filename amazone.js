@@ -16,10 +16,13 @@ const Cart = require("./models/cart.js")
 const methodOverride = require("method-override")
 const passport=require("passport")
 const passportLocal=require("passport-local")
-const session = require("express-session");
+
 const flash = require("connect-flash")
 const User = require("./models/user.js")
 const Orders =require("./models/orders.js")
+const dbURL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/amazone'
+const session = require("express-session")
+const MongoStore = require("connect-mongo")(session)
 mongoose.connect(dbUrl,{
     // useNewUrlParser:true,
     // useCreateIndex: true,
@@ -35,6 +38,7 @@ mongoose.connect(dbUrl,{
 amazone.use(express.static("client"));
   
 // parse post params sent in body in json format
+
 amazone.use(express.json());
 
 amazone.use(express.urlencoded({extended:true}))
@@ -43,7 +47,17 @@ amazone.set("views",path.join(__dirname,"views"))
 amazone.engine("ejs", ejsMate)
 amazone.use(methodOverride("_method"))
 //session middleware
+const store = new MongoStore({
+  url: dbUrl,
+  secret:"secret",
+  touchAfter: 24*60*60
+})
+
+store.on("error",function(e){
+ console.log("session store error =",e)
+})
 const sessionSecret ={
+    store,
     secret:"my secret",
     resave:false,
     saveUninitialized:true,
@@ -179,6 +193,7 @@ amazone.delete("/returnsorders",async(req,res)=>{
   await Orders.findByIdAndDelete(id)
   res.redirect("/cart")
 })
+
 amazone.get("/paymentform/credit",isLoggedin,async(req,res)=>{
   const {id} = req.user
   const orders = await Orders.find({userId:id})
@@ -231,6 +246,12 @@ amazone.get("/paymentform/credit",isLoggedin,async(req,res)=>{
     }
   });
  })
+ amazone.get("/:id",async(req,res)=>{
+    
+  const products = await Products.findById(req.params.id);
+  
+  res.render("show.ejs",{products});
+  })
  amazone.get("/success",(req,res)=>{
   const payerId = req.query.PayerID;
   const paymentId = req.query.PaymentId;
@@ -329,12 +350,7 @@ amazone.post("/paymentform",isLoggedin,async(req,res)=>{
  })
  
 
-amazone.get("/:id",async(req,res)=>{
-    
- const products = await Products.findById(req.params.id);
- 
- res.render("show.ejs",{products});
- })
+
 
 amazone.delete("/cart",async(req,res)=>{
     const {cart}= req.body
