@@ -247,12 +247,7 @@ amazone.get("/paymentform/credit",isLoggedin,async(req,res)=>{
     }
   });
  })
- amazone.get("/:id",async(req,res)=>{
-    
-  const products = await Products.findById(req.params.id);
-  
-  res.render("show.ejs",{products});
-  })
+
  amazone.get("/success",(req,res)=>{
   const payerId = req.query.PayerID;
   const paymentId = req.query.PaymentId;
@@ -287,6 +282,12 @@ amazone.get("/paymentform",isLoggedin,async(req,res)=>{
     res.render("paymentform.ejs",{cart})
 
 })
+amazone.get("/:id",async(req,res)=>{
+    
+  const products = await Products.findById(req.params.id);
+  
+  res.render("show.ejs",{products});
+  })
 amazone.post("/paymentform",isLoggedin,async(req,res)=>{
     const cart = await Cart.find({});
     const {order} = req.body
