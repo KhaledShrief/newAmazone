@@ -192,7 +192,7 @@ amazone.delete("/returnsorders",async(req,res)=>{
   const {order}= req.body
   const {id} = order
   await Orders.findByIdAndDelete(id)
-  res.redirect("/cart")
+  res.redirect("/returnsorders")
 })
 
 amazone.get("/paymentform/credit",isLoggedin,async(req,res)=>{

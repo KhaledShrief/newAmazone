@@ -107,17 +107,19 @@
     <%if(submitted.length !== 0){%>
     <%for(let i = 0; i < submitted.length; i++ ){%>
     <div class="card card-p">
-        <a href="/"> <img class="card-img" src="<%=submitted[i].cart[i][i].image%>"></a>
+        <a href="/"> <img class="card-img" src="<%=submitted[i].cart[i][0].image%>"></a>
         <div class="card-h6-body">
-        <h5 class="card-h6"><%=submitted[i].cart[i][i].price%></h5>
        
         <h5 class="stock">Waiting for Delivery</h5>
-        <h5 class="card-h6"><%=submitted[i].tottal%></h5>
+        <h5 class="card-h6"><%=submitted[i].address%></h5>
+
+        <h5 class="card-h6"><%=submitted[i].city%></h5>
+        <h5 class="card-h6"><%=submitted[i].country%></h5>
         <h5 class="stock">Tottal Price:$<%=submitted[i].tottal%></h5>
-        <p><%=submitted[i].cart[i][i].title%></p>    
+        <p><%=submitted[i].tottal%></p>    
     </div>
         <div class="price-button">
-        <h5 class="card-h6"><%=submitted[i].tottal%></h5>
+        <!-- <h5 class="card-h6"><%=submitted[i].tottal%></h5> -->
         <form action="/returnsorders?_method=DELETE" method="POST">
             
             <button name="order[id]" class="button alert" value="<%=submitted[i]._id%>">Cancel</button>
