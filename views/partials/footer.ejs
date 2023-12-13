@@ -32,10 +32,10 @@
         justify-content: space-around;
         flex-direction: column;
         font-size: small;
-       
+       /* background-color: red; */
         
     }h2{
-        
+        /* background-color: green; */
         color: #fff;
         font-size: 16px;
         font-weight: 600;
@@ -55,7 +55,7 @@
         top: 15px;
     }.footer3{
         display: flex;
-        justify-content:space-evenly;
+        justify-content:space-evenly;   /*change*/
         align-items: center;
         border-top:1px #3a4553 solid;
         width: 100%;
@@ -63,23 +63,27 @@
         height: 100px;
     }.footer3-img-div{
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
         display: flex;
-        width: 10%;
-        height: 90px;
+        width:30%;    /*change*/
+        height: fit-content;
         margin-top: 10px;
+        /* background-color: red; */
+        z-index: 4;
     }
     .footer3-img{
         width: 74px;
         height: 28px;
     }.footer3-right{
-        margin-left: -250px;
+        /* background-color: green; */
+        
         align-items: center;
         justify-content: space-evenly;
         display: flex;
         /* background-color: red; */
-        width: 36%;
+        width: 500px;
         height: 100px;
+        /* flex-direction: column;    change */
     }
     .footer3-a{
         display: flex;
@@ -88,45 +92,51 @@
         border-radius:3px ;
         width: 150px;
         height: 35px;
-        justify-content: flex-start;
+        justify-content: center;
        align-items: center;
        font-size: 13px;
     }.footer3-right-span{
         width: 20px;
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }.flag2{
         position: relative;
-        top: 3.5px;
+        top: 2.5px;
         left:-5px;
     }.footer4{
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        /* flex-direction: column; */
        align-items:flex-start;
         border-top: 40px #131A22 solid;
         border-right: 70px #131A22 solid;
         border-left: 100px #131A22 solid;
         width: 100%;
-        height: 450px;
+        height: 450px;  /* change*/
         background-color: #131A22;
+        /* background-color: aqua; */
     }.div-t{
         display: flex;
         justify-content: space-around;
          width:100%;
-         height: 70px;
+         height: fit-content;
          /* background-color: red; */
+         /* flex-direction: column;          change */
     }.div-content{
+        display: flex;
         font-size: small;
         color: #DDD;
         width: 150px;
         height: 70px;
         /* background-color: green; */
+        /* align-items: center; */
     }.div-t4{
         margin-left: -173px;
         display: flex;
         justify-content: space-around;
          width:86%;
-         height: 70px;
+         height: fit-content;
+         /* flex-direction: column; change */
          /* background-color: red; */
     }.anker{
         color: #DDD;
@@ -194,7 +204,67 @@
         width: 100%;
         height: 500px;
         background-color:#fff;
+    } @media ( max-width: 600px){
+        .footer3{
+            height: 120px;
+            justify-content: space-between;
+        }.footer3-img-div{
+            align-items: flex-end;
+            width: 30%;
+        }.footer3-right{
+            
+            align-items: flex-end;
+            justify-content: flex-end;
+            flex-direction: column;
+        }.footer2{
+            flex-direction: column;
+            height: fit-content;
+            align-items: center;
+        }.footerul{
+            width: 100px;
+            height: 320px;
+        }
+    }@media ( max-width: 1000px){
+        .footer3{
+            
+            justify-content: space-between;
+        }.footer3-img-div{
+            
+            width: 50%;
+        }.footer3-right{
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }.footer4{
+            height: fit-content;
+        }
+        .div-t{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .div-t4{
+            position: relative;
+            left: 87.5px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }.div-content{
+            height: 110px;
+            /* justify-content: center; */
+        }.footer2{
+            flex-direction: column;
+            height: fit-content;
+            align-items: center;
+        }.footerul{
+            width: 200px;
+            height: 320px;
+            /* line-height: 2px; */
+            position: relative;
+            left:-40px;
+        }
     }
+
 </style>
 <% if(!currentUser){%>
 <div class="footerzero">
@@ -209,7 +279,7 @@
 </div>
 <%}%>
 <div class="position">
-<a href="#img1" class="back-to-top"><div class="footer1">Back to top</div></a>
+<a href="#backTop" class="back-to-top"><div class="footer1">Back to top</div></a>
 <div class="footer2">
     <ul class="footerul footerul1">
         <h2>Get to Know Us</h2>

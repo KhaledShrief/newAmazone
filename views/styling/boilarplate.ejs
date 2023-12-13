@@ -13,6 +13,7 @@
 
 <body>
     <style>
+        
         body{
             padding: 0%;
             margin: 0%;
@@ -21,11 +22,16 @@
             top:90px;
             z-index: 3;
             width: 100%;
-        }
+        }@media ( max-width: 1000px){
+       body{
+        width: fit-content;
+       }
+         
+    }
     </style>
     <%-include("../partials/newnav.ejs")%>
     <%if(success && success.length){%>
-        <div class="d-flex p-2 bg-blue fg-white mar" id="message"><h7><%= success %></h7></div>
+        <div class="d-flex p-2 bg-blue fg-white mar" id="message" id="succ" ><h7><%= success %></h7></div>
         
         
         

@@ -136,7 +136,7 @@ amazone.get("/register",(req,res)=>{
     res.render("register.ejs")
 })
 amazone.post("/register",async(req,res)=>{
-    
+  try{   
     const {username,email,password} = req.body
     
     const user = new User({email,username})
@@ -147,6 +147,10 @@ amazone.post("/register",async(req,res)=>{
         req.flash("success","welcome to Fake Amazon")
         res.redirect("/")
     })
+  } catch(e){
+    req.flash("success",`wrong credintials ${e}`)
+    res.redirect("/register")
+  }
 })
 amazone.get("/login",(req,res)=>{
    
@@ -363,7 +367,7 @@ amazone.delete("/cart",async(req,res)=>{
 
 amazone.post("/:id",async(req,res)=>{
     const {id} =req.params
-
+    
     const cart =  await Products.findById(id)
                            
    

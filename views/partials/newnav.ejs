@@ -143,7 +143,7 @@
         border: 1px white solid;
     }.nav{
         
-        width: 100%;
+        width:100%;
         position:relative;
         /* margin-top:-75px; */
         display: flex;
@@ -247,10 +247,19 @@ overflow-y:auto;
         opacity:1;
 
         display: block;  
+    }@media ( max-width: 600px){
+        
+    }@media ( max-width: 1000px){
+      .issue{
+        width:150px;
+        /* background-color: green; */
+        text-align: center;
+      }
+         
     }
     </style>
     <div class ="nav1">
-        <a  href="/"><img class="img1" src="https://jitsvinger.co.za/wp-content/uploads/2018/04/Amazon-Logo-1024x373-400x146.png"></a>
+        <a  href="/"><img id="backTop" class="img1" src="https://jitsvinger.co.za/wp-content/uploads/2018/04/Amazon-Logo-1024x373-400x146.png"></a>
         <a href="#" class="app-bar-item signin"><p class="top">Deliver to</p><b class="bottom"><i class="fa fa-map-marker"></i>Egypt</b></a>
         <form class="nav-form">
             <ul class="all">
@@ -337,7 +346,7 @@ overflow-y:auto;
                 <span class="mif-menu"><b>All</b></span>
             </button>
         </div></li>
-        <li class="nav-li"><a href="#" class="app-bar-item k">Today's Deals</a></li>
+        <li class="nav-li issue"><a href="#" class="app-bar-item k">Today's Deals</a></li>
         <%if(!currentUser){%>
         <li  class="nav-li"><a href="/register" class="app-bar-item k">Register</a></li>
         <%}%>
